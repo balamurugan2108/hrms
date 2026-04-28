@@ -26,7 +26,7 @@ public class AdminController {
     public AdminCC addAdmin(@RequestBody AdminCC admin) { // Added @RequestBody
         return service.addAdmin(admin);
     }
-    private String name;
+  
     @GetMapping("/getAll")
     public List<AdminCC> getAllAdmin(){
         return service.getAll();
