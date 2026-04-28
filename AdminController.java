@@ -17,12 +17,11 @@ import com.spring.entity.AdminCC;
 import com.spring.service.AdminService;
 @RestController
 @RequestMapping("/api/admin")
-@PreAuthorize("hasRole('ADMIN')")
 public class AdminController {
     
     @Autowired
     private AdminService service;
-
+    private String name;
     @PostMapping("/add")
     public AdminCC addAdmin(@RequestBody AdminCC admin) { // Added @RequestBody
         return service.addAdmin(admin);
