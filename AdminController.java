@@ -21,12 +21,11 @@ public class AdminController {
     
     @Autowired
     private AdminService service;
-    private String name;
     @PostMapping("/add")
     public AdminCC addAdmin(@RequestBody AdminCC admin) { // Added @RequestBody
         return service.addAdmin(admin);
     }
-
+    private String name;
     @GetMapping("/getAll")
     public List<AdminCC> getAllAdmin(){
         return service.getAll();
