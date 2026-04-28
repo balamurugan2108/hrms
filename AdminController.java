@@ -18,7 +18,7 @@ import com.spring.service.AdminService;
 @RestController
 @RequestMapping("/api/admin")
 public class AdminController {
-    
+	private String name;
     @Autowired
     private AdminService service;
     @PostMapping("/add")
