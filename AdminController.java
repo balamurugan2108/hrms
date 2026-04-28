@@ -18,10 +18,10 @@ import com.spring.service.AdminService;
 @RestController
 @RequestMapping("/api/admin")
 public class AdminController {
-	private String name;
-	private String name123;
+	
     @Autowired
     private AdminService service;
+    
     @PostMapping("/add")
     public AdminCC addAdmin(@RequestBody AdminCC admin) { // Added @RequestBody
         return service.addAdmin(admin);

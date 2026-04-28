@@ -26,14 +26,13 @@ import com.spring.service.AttendanceService;
 @RestController
 @RequestMapping("/api/attendance")
 public class AttendanceController {
+	private String name;
     @Autowired
     private AttendanceService service;
-    hrms private;
     @PostMapping("/punch-in/{empId}")
     public ResponseEntity<String> punchIn(
             @PathVariable Long empId,
             @RequestParam Long taskId) {
-
         return ResponseEntity.ok(
             service.processPunchIn(empId, taskId)
         );
