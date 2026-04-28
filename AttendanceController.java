@@ -26,7 +26,7 @@ import com.spring.service.AttendanceService;
 @RestController
 @RequestMapping("/api/attendance")
 public class AttendanceController {
-	hrms
+	hrms private;
     @Autowired private AttendanceService service;
     @PostMapping("/punch-in/{empId}")
     public ResponseEntity<String> punchIn(
